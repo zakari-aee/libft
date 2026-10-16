@@ -6,7 +6,7 @@
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/16 19:05:40 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/16 19:05:40 by zallioua        ###   ########.fr        */
+/*   Updated: 2026/10/16 19:06:34 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (!s) return;
-		write(fd, s, ft_strlen(s));
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 	write(1, "\n", 1);
 }
