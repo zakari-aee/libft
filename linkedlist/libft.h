@@ -6,7 +6,7 @@
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/20 22:09:10 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/20 22:38:50 by zallioua        ###   ########.fr        */
+/*   Updated: 2026/10/21 10:00:23 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ void			ft_putendl_fd(char *s, int fd);
 size_t			ft_strlen(const char *s);
 unsigned int	ft_lstsize(t_list *lst);
 t_list			*ft_lstlast(t_list *lst);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+int				list_max(t_list *head, int *max);
 
 #endif
