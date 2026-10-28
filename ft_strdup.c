@@ -5,29 +5,29 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/19 14:21:03 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 14:21:07 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/14 16:47:54 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/27 11:32:37 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s)
 {
+	char	*p;
 	size_t	i;
 	size_t	len;
-	char	*ptr;
 
-	len = ft_strlen(s1);
-	ptr = malloc(sizeof(char) * (len + 1));
-	if (!ptr)
-		return (NULL);
+	len = ft_strlen(s);
 	i = 0;
-	while (i < len)
+	p = malloc(len + 1);
+	if (!p)
+		return (NULL);
+	while (s[i])
 	{
-		ptr[i] = s1[i];
+		p[i] = s[i];
 		i++;
 	}
-	ptr[i] = '\0';
-	return (ptr);
+	p[i] = '\0';
+	return (p);
 }

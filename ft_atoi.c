@@ -5,40 +5,53 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/13 21:01:46 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 14:18:31 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/14 13:03:57 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/27 11:31:06 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+static int	ft_check(long res, int s)
 {
-	int	s;
-	int	i;
-	int	r;
+	int		t;
+	long	r;
 
-	i = 0;
-	s = 1;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] <= '+')
+	t = 5;
+	r = 0;
+	r = res * t;
+	if (r / t != res)
 	{
-		if (str[i] == '-')
-			s *= -1;
-		i++;
+		if (s < 0)
+			return (0);
+		return (-1);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		r = (r * 10) + (str[i] - '0');
-		i++;
-	}
-	return (r * s);
+	return (res);
 }
 
-int	main(void)
+int	ft_atoi(const char *nptr)
 {
-	int	a = ft_atoi("--+-154-78");
+	char	*s;
+	long	res;
+	int		sign;
+	int		i;
 
-	printf("%i", a);
+	s = (char *) nptr;
+	res = 0;
+	sign = 1;
+	i = 0;
+	while (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13))
+		i++;
+	if (s[i] == '-' || s[i] == '+')
+	{
+		if (s[i] == '-')
+			sign = -sign;
+		i++;
+	}
+	while (s[i] >= '0' && s[i] <= '9')
+	{
+		res = (res * 10) + (s[i] - '0');
+		i++;
+	}
+	return (ft_check((res * sign), sign));
 }

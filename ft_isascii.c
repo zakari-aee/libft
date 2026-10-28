@@ -5,20 +5,12 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/19 10:21:56 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 10:36:12 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/12 17:18:24 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/27 11:31:28 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
-}
-
-int	main(void)
-{
-	printf("%d\n", ft_isascii(-1));
-	printf("%d", isascii('c'));
 }

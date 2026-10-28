@@ -5,31 +5,26 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/19 14:15:52 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 14:15:52 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/18 18:14:19 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/27 11:32:08 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** ft_memcmp: compares n bytes of s1 and s2.
-** Returns 0 if equal, else the difference of first differing bytes.
-*/
-
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
+	const unsigned char	*p1;
+	const unsigned char	*p2;
 	size_t				i;
-	const unsigned char	*c1;
-	const unsigned char	*c2;
 
-	c1 = (const unsigned char *) s1;
-	c2 = (const unsigned char *) s2;
+	p1 = s1;
+	p2 = s2;
 	i = 0;
 	while (i < n)
 	{
-		if (!(c1[i] == c2[i]))
-			return (c1[i] - c2[i]);
+		if (p1[i] != p2[i])
+			return (p1[i] - p2[i]);
 		i++;
 	}
 	return (0);

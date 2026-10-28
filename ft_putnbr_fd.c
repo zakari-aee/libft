@@ -5,8 +5,8 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/16 19:06:14 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/16 19:06:14 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/15 22:57:19 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/27 11:32:15 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ void	ft_putnbr_fd(int n, int fd)
 		m = -m;
 	}
 	if (m >= 10)
-	{
 		ft_putnbr_fd(m / 10, fd);
-	}
-	ft_putchar_fd((m % 10) + '0', fd);
+	ft_putchar_fd(m % 10 + '0', fd);
 }

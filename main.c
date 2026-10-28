@@ -1,21 +1,67 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   main.c                                            :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/19 11:13:28 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 12:15:32 by zallioua        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zallioua <zallioua@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/27 12:41:31 by zallioua          #+#    #+#             */
+/*   Updated: 2026/10/27 15:46:55 by zallioua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 
-int	main(void)
+int ft_len(int n)
 {
-	char	text[] = "Hello from Linux!";
+    int len;
 
-	write(1, text, sizeof(text) + 9999999999999999);
-	return (0);
+    len = 0;
+    if (n <= 0)
+        len++;
+    while (n != 0)
+    {
+        n /= 10;
+        len++;
+    }
+    return (len);
+}
+
+void ft_putnbr(int a)
+{
+    long len = ft_len(a);
+    long len1 = ft_len(a);
+    long rev = 0;
+    char c;
+    if (a < 0)
+    {
+        write(1, "-", 1);
+        a = -a;
+    }
+    while (len > 0)
+    {
+        rev = (rev * 10) + (a % 10);
+        a /= 10;
+        len--;
+    }
+
+    while (len1 > 0)
+    {
+        c = (rev % 10) + '0';
+        write(1, &c, 1);
+        rev /= 10;
+        len1--;
+    }
+}
+
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+} t_list;
+
+int main(void)
+{
+    
 }

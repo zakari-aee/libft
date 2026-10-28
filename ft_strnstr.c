@@ -5,28 +5,30 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/19 14:17:44 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 14:17:48 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/14 13:16:48 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/27 11:32:49 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hay, const char *needle, size_t len)
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	l;
 
-	if (!*needle)
-		return ((char *) hay);
+	if (!*s2)
+		return ((char *) s1);
 	i = 0;
-	while (hay[i] && i < len)
+	while (s1[i] && i < len)
 	{
-		j = 0;
-		while (needle[j] && (i + j) < len && hay[i + j] == needle[j])
-			j++;
-		if (!needle[j])
-			return ((char *)(hay + i));
+		l = 0;
+		while (s1[i + l] && (s1[i + l] == s2[l]) && (i + l < len))
+		{
+			l++;
+			if (!s2[l])
+				return ((char *) & s1[i]);
+		}
 		i++;
 	}
 	return (NULL);

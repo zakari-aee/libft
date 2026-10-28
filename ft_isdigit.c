@@ -5,16 +5,12 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/19 10:21:31 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 10:21:31 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/12 15:49:21 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/27 11:31:31 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }

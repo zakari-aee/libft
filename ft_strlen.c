@@ -5,8 +5,8 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/19 11:32:46 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 11:32:46 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/12 17:32:59 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/27 11:32:46 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlen(const char *s)
 
 	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
 	return (i);
 }

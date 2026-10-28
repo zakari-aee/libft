@@ -1,64 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_itoa.c                                         :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/16 19:05:37 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/16 19:05:38 by zallioua        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zallioua <zallioua@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/15 16:36:44 by zallioua          #+#    #+#             */
+/*   Updated: 2026/10/27 13:13:43 by zallioua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_digits(long n)
+static int	atoi_len(long n)
 {
-	int	len;
+	int	c;
 
-	len = 1;
+	c = 1;
 	if (n < 0)
 	{
-		len++;
-		n = -n;
+		n = n * -1;
+		c++;
 	}
 	while (n >= 10)
 	{
-		n /= 10;
-		len++;
+		n = n / 10;
+		c++;
 	}
-	return (len);
+	return (c);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*r;
-	long	z;
-	int		len;
-
-	z = n;
-	len = count_digits(z);
-	r = (char *) malloc(sizeof(char) * (len + 1));
-	if (!r) return NULL;
-		r[len] = '\0';
-	if (z < 0)
+	long	i;
+	long	len;
+	i = n;
+	len = atoi_len(n);
+	r = malloc(sizeof(char) * (len + 1));
+	if (!r)
+		return (NULL);
+	r[len] = '\0';
+	if (i < 0)
 	{
+		i = -i;
 		r[0] = '-';
-		z = -z;
 	}
 	len--;
-	while (z >= 10)
+	while (i >= 10)
 	{
-		r[len] = (z % 10) + '0';
-		z /= 10;
+		r[len] = (i % 10) + '0';
+		i /= 10;
 		len--;
 	}
-	r[len] = z + '0';
+	r[len] = i + '0';
 	return (r);
-}
-
-int	main(void)
-{
-	printf("%s", ft_itoa(-15));
-	return (0);
 }

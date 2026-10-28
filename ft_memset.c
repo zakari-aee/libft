@@ -5,24 +5,24 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/16 19:05:38 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 12:48:01 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/12 17:35:26 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/24 09:45:45 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*z;
-	size_t			i;
+	size_t	len;
+	char	*z;
 
-	z = (unsigned char *) b;
-	i = 0;
-	while (i < len)
+	z = (char *) s;
+	len = 0;
+	while (len < n)
 	{
-		z[i] = (unsigned char) c;
-		i++;
+		z[len] = (char) c;
+		len++;
 	}
-	return (b);
+	return (s);
 }

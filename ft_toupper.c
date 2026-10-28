@@ -5,12 +5,10 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/19 14:12:13 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 14:12:13 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/13 13:26:30 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/27 11:33:03 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

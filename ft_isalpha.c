@@ -5,16 +5,12 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/13 21:03:08 by zallioua         #+#    #+#              */
-/*   Updated: 2026/10/19 10:21:22 by zallioua        ###   ########.fr        */
+/*   Created: 2026/10/12 13:49:51 by zallioua         #+#    #+#              */
+/*   Updated: 2026/10/27 11:31:24 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isalpha(int c)
 {
-	if ((c > 'a' && c < 'z') || (c > 'A' && c < 'Z'))
-		return (1);
-	return (0);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
