@@ -19,7 +19,7 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c libft.h
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -I. -c $< -o $@
 
 clean:
 	$(RM) $(OBJS)
