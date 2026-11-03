@@ -6,12 +6,11 @@
 /*   By: zallioua <zallioua@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:35:26 by zallioua          #+#    #+#             */
-/*   Updated: 2026/11/02 15:02:25 by zallioua         ###   ########.fr       */
+/*   Updated: 2026/11/03 09:21:36 by zallioua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
