@@ -6,7 +6,7 @@
 /*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/18 18:14:19 by zallioua         #+#    #+#              */
-/*   Updated: 2026/11/03 09:34:38 by zallioua        ###   ########.fr        */
+/*   Updated: 2026/11/03 13:49:51 by zallioua        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	p1 = s1;
 	p2 = s2;
+	if (p1 == p2)
+		return (0);
 	i = 0;
 	while (i < n)
 	{
