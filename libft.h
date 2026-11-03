@@ -6,7 +6,7 @@
 /*   By: zallioua <zallioua@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 14:20:02 by zallioua          #+#    #+#             */
-/*   Updated: 2026/10/30 11:48:40 by zallioua         ###   ########.fr       */
+/*   Updated: 2026/11/03 09:33:17 by zallioua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@
 typedef struct s_list
 {
 	void			*content;
-	char l;
-	struct s_list	*next;
-}					t_list;
+	struct	s_list	*next;
+}				t_list;
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
