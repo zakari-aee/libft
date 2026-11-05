@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_calloc.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/14 15:28:27 by zallioua         #+#    #+#              */
-/*   Updated: 2026/11/03 09:34:06 by zallioua        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zallioua <zallioua@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/14 15:28:27 by zallioua          #+#    #+#             */
+/*   Updated: 2026/11/05 21:01:02 by zallioua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (size != 0 && nmemb > (size_t) - 1 / size)
+	if (size != 0 && nmemb > (size_t)-1 / size)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)

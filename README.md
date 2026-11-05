@@ -110,3 +110,12 @@ A few choices I made:
 - W3Schools, Stack Overflow, GeeksforGeeks and Google, for C concepts and examples
 - YouTube, for visual and deeper explanations
 - AI, to explore subjects in more depth.
+
+
+//  zakaria       anoir       younes         ayoub
+
+//  ayoub         younes       anoir       zakaria
+int	main(void)
+{
+	tmrin("  zakaria       anoir       younes         ayoub  ");
+}

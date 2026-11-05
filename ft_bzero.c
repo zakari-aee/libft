@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_bzero.c                                        :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: zallioua <zallioua@student.1337.ma>       #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/12 19:13:37 by zallioua         #+#    #+#              */
-/*   Updated: 2026/11/03 13:49:19 by zallioua        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zallioua <zallioua@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/12 19:13:37 by zallioua          #+#    #+#             */
+/*   Updated: 2026/11/04 10:34:44 by zallioua   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t			len;
-	unsigned char	*z;
+	size_t len;
+	unsigned char *z;
 
-	z = (unsigned char *) s;
+	z = (unsigned char *)s;
 	len = 0;
 	while (len < n)
 	{

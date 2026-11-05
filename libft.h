@@ -6,7 +6,7 @@
 /*   By: zallioua <zallioua@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 14:20:02 by zallioua          #+#    #+#             */
-/*   Updated: 2026/11/03 13:56:40 by zallioua         ###   ########.fr       */
+/*   Updated: 2026/11/04 10:33:58 by zallioua   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
+# include <stdio.h>
 typedef struct s_list
 {
 	void			*content;
